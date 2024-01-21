@@ -1,9 +1,9 @@
 const WebSocket = require('ws');
 const { MongoClient } = require('mongodb');
 const config = require('./config');
-const server = new WebSocket.Server({ host: '0.0.0.0', port: config.serverPort });
+// const server = new WebSocket.Server({ host: '0.0.0.0', port: config.serverPort });
 
-// const server = new WebSocket.Server({ port: config.serverPort });
+const server = new WebSocket.Server({ port: config.serverPort });
 
 // Function to connect to MongoDB and handle user information
 async function handleUserInformation(userInfo) {
