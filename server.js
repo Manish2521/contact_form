@@ -14,7 +14,7 @@ async function handleUserInformation(userInfo) {
         console.log('Connected to MongoDB');
 
         const db = client.db(config.mongoDbName);
-        const collection = db.collection('user_information_ws');
+        const collection = db.collection('user_information_cf_deployed');
 
         // Insert user information into the database
         await collection.insertOne(userInfo);
@@ -41,7 +41,7 @@ server.on('connection', (socket) => {
         handleUserInformation(userInfo);
 
         // Send a response back to the client
-        socket.send('Thanks Buddy');
+        socket.send('Thank you! Your form has been submitted successfully.');
     });
 
     // Event handler for when the connection is closed
