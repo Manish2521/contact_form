@@ -3,8 +3,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // const socket = new WebSocket(config.serverUrl);
-    const socket = new WebSocket(config.serverUrl.replace('ws:', 'wss:'));
+    const socket = new WebSocket('ws://localhost:3000');
+    // const socket = new WebSocket(config.serverUrl.replace('ws:', 'wss:'));
 
     // Event handler for when the connection is established
     socket.addEventListener('open', (event) => {
