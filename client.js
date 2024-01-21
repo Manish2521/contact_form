@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event handler for receiving messages from the server
     socket.addEventListener('message', (event) => {
         const responseDisplay = document.getElementById('responseDisplay');
-        responseDisplay.textContent = 'Response from server: ' + event.data;
+        responseDisplay.textContent = event.data;
     });
 
     // Event handler for errors
